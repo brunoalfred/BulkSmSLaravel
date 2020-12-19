@@ -2,7 +2,7 @@
                <div class="navbar-custom topnav-navbar topnav-navbar-dark">
                    <div class="container-fluid">
 
-                       <!-- LOGO -->
+                       {{-- <!-- LOGO -->
                        <a href="#" class="topnav-logo">
                            <span class="topnav-logo-lg">
                                <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="16">
@@ -10,7 +10,7 @@
                            <span class="topnav-logo-sm">
                                <img src="{{ asset('assets/images/logo_sm_dark.png') }}" alt="" height="16">
                            </span>
-                       </a>
+                       </a> --}}
 
                        <ul class="list-unstyled topbar-right-menu float-right mb-0">
 
