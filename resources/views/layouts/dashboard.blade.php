@@ -31,6 +31,8 @@
                 @include('layouts.navbar')
                 @include('layouts.partials.header')
                 @yield('content')
+                @include('layouts.partials.footer')
+                @include('layouts.sidebar')
 
             </div>
         </div>
