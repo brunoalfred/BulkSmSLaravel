@@ -29,6 +29,7 @@
             <div class="content">
 
                 @include('layouts.navbar')
+                @include('layouts.partials.header')
                 @yield('content')
 
             </div>
