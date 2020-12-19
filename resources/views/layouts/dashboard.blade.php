@@ -11,9 +11,9 @@
     <link rel="shortcut icon" href="{{ asset('assets/images/favicon.ico') }}">
 
     <!-- App css -->
-    <link href="{{ asset('assets/css/icons.min.css" rel="stylesheet" type="text/css') }}" />
-    <link href="{{ asset('assets/css/app-creative.min.css" rel="stylesheet" type="text/css" id="light-style') }}" />
-    <link href="{{ asset('assets/css/app-creative-dark.min.css" rel="stylesheet" type="text/css" id="dark-style') }}" />
+    <link href="{{ asset('assets/css/icons.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/app-creative.min.css') }}" rel="stylesheet" type="text/css" id="light-style" />
+    <link href="{{ asset('assets/css/app-creative-dark.min.css') }}" rel="stylesheet" type="text/css" id="dark-style" />
 
     @yield('css')
     @stack('css')
