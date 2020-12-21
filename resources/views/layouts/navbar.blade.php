@@ -2,7 +2,8 @@
                <div class="navbar-custom topnav-navbar topnav-navbar-dark">
                    <div class="container-fluid">
 
-                       {{-- <!-- LOGO -->
+                       {{--
+                       <!-- LOGO -->
                        <a href="#" class="topnav-logo">
                            <span class="topnav-logo-lg">
                                <img src="{{ asset('assets/images/logo-light.png') }}" alt="" height="16">
@@ -237,7 +238,7 @@
                                            class="rounded-circle">
                                    </span>
                                    <span>
-                                       <span class="account-user-name">Dominic Keller</span>
+                                       <span class="account-user-name"> {{ Auth::user()->email }} </span>
                                        <span class="account-position">Founder</span>
                                    </span>
                                </a>
@@ -273,9 +274,18 @@
                                    </a>
 
                                    <!-- item-->
-                                   <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                   <a href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();document.getElementById('logout-form').submit();"
+                                       class="dropdown-item notify-item">
                                        <i class="mdi mdi-logout mr-1"></i>
                                        <span>Logout</span>
+
+
+                                       <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                           class="d-none">
+                                           @csrf
+                                       </form>
+
                                    </a>
 
                                </div>
