@@ -18,4 +18,11 @@ class ExampleTest extends TestCase
 
         $response->assertStatus(200);
     }
+
+    public function test_a_welcome_view_can_be_rendered()
+    {
+        $view = $this->view('class_representatives.fields', ['first_name' => 'Taylor']);
+
+        $view->assertSee('Taylor');
+    }
 }

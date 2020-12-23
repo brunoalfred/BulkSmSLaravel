@@ -6,9 +6,15 @@ use App\Http\Requests\CreateClassRepresentativeRequest;
 use App\Http\Requests\UpdateClassRepresentativeRequest;
 use App\Repositories\ClassRepresentativeRepository;
 use App\Http\Controllers\AppBaseController;
+use http\Client\Response;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Flash;
-use Response;
+use Illuminate\Routing\Redirector;
+
 
 class ClassRepresentativeController extends AppBaseController
 {
@@ -25,20 +31,19 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param Request $request
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
     public function index(Request $request)
     {
         $classRepresentatives = $this->classRepresentativeRepository->all();
 
-        return view('class_representatives.index')
-            ->with('classRepresentatives', $classRepresentatives);
+        return view('class_representatives.index')->with('classRepresentatives', $classRepresentatives);
     }
 
     /**
      * Show the form for creating a new ClassRepresentative.
      *
-     * @return Response
+     * @return Response|Application|Factory|View
      */
     public function create()
     {
@@ -50,7 +55,7 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param CreateClassRepresentativeRequest $request
      *
-     * @return Response
+     * @return Response|Application|RedirectResponse|Redirector
      */
     public function store(CreateClassRepresentativeRequest $request)
     {
@@ -68,7 +73,7 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param int $id
      *
-     * @return Response
+     * @return Response|Application|Factory|View
      */
     public function show($id)
     {
@@ -88,7 +93,7 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param int $id
      *
-     * @return Response
+     * @return Response|Application|Factory|View
      */
     public function edit($id)
     {
@@ -109,7 +114,7 @@ class ClassRepresentativeController extends AppBaseController
      * @param int $id
      * @param UpdateClassRepresentativeRequest $request
      *
-     * @return Response
+     * @return Response|Application|RedirectResponse|Redirector
      */
     public function update($id, UpdateClassRepresentativeRequest $request)
     {
@@ -133,9 +138,9 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param int $id
      *
+     * @return Response|Application|RedirectResponse|Redirector
      * @throws \Exception
      *
-     * @return Response
      */
     public function destroy($id)
     {

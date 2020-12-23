@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                             <a href="apps-file-manager.html" class="dropdown-item">File Manager</a> --}}
-                            <a href="apps-file-manager.html" class="dropdown-item">CRs</a>
+                        <a href="{{route('classRepresentatives.index')}}" class="dropdown-item">CRs</a>
 
                         </div>
                     </li>

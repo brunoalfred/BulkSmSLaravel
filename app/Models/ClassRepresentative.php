@@ -22,7 +22,7 @@ class ClassRepresentative extends Model
 
 
     public $table = 'class_representatives';
-    
+
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
@@ -64,5 +64,5 @@ class ClassRepresentative extends Model
         'gender' => 'required|string'
     ];
 
-    
+
 }
