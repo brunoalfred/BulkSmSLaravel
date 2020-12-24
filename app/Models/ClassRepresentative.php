@@ -2,23 +2,12 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model as Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
-
-
-/**
- * Class ClassRepresentative
- * @package App\Models
- * @version December 21, 2020, 9:26 pm UTC
- *
- * @property string $first_name
- * @property string $last_name
- * @property integer $year_of_study
- * @property string $programme
- * @property string $gender
- */
 class ClassRepresentative extends Model
 {
+<<<<<<< HEAD
 
 
     public $table = 'class_representatives';
@@ -65,4 +54,7 @@ class ClassRepresentative extends Model
     ];
 
 
+=======
+    use HasFactory;
+>>>>>>> parent of 6200d80... Feat: Generated ClassRepresentative CRUD boilerplate code with Infyom
 }

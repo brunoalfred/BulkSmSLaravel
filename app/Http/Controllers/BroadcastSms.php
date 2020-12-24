@@ -25,7 +25,7 @@ class BroadcastSms extends Controller
         $sms      = $AT->sms();
         $result   = $sms->send([
             'to'      => '255757221600',
-            'message' => 'Bruno Hapa!, Niaje',
+            'message' => 'Bruno Hapa!',
 
 
         ]);
