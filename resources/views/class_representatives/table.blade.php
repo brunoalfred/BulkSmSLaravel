@@ -19,12 +19,12 @@
                     <td>{{ $classRepresentative->programme }}</td>
                     <td>{{ $classRepresentative->gender }}</td>
                     <td>
-                        {!! Form::open(['route' => ['classRepresentatives.destroy', $classRepresentative->id], 'method'
+                        {!! Form::open(['route' => ['classRepresentatives.destroy', $classRepresentative->registration_number], 'method'
                         => 'delete']) !!}
                         <div class='btn-group'>
-                            <a href="{{ route('classRepresentatives.show', [$classRepresentative->id]) }}"
+                            <a href="{{ route('classRepresentatives.show', [$classRepresentative->registration_number]) }}"
                                 class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                            <a href="{{ route('classRepresentatives.edit', [$classRepresentative->id]) }}"
+                            <a href="{{ route('classRepresentatives.edit', [$classRepresentative->registration_number]) }}"
                                 class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                             {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class'
                             => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}

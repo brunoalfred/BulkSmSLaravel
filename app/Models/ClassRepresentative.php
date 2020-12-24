@@ -20,12 +20,13 @@ use Illuminate\Database\Eloquent\Model as Model;
 class ClassRepresentative extends Model
 {
 
-
     public $table = 'class_representatives';
+
 
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
+    protected $primaryKey = 'registration_number';
 
 
 
@@ -63,6 +64,4 @@ class ClassRepresentative extends Model
         'programme' => 'required|string|max:30',
         'gender' => 'required|string'
     ];
-
-
 }

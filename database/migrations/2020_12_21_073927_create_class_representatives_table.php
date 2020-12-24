@@ -14,7 +14,7 @@ class CreateClassRepresentativesTable extends Migration
     public function up()
     {
         Schema::create('class_representatives', function (Blueprint $table) {
-
+            // $table->id();
             $table->string('first_name', 25);
             $table->string('last_name', 25);
             $table->unsignedBigInteger('registration_number', 25)->unique();
