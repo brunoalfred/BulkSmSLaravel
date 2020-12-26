@@ -23,6 +23,13 @@ class ClassRepresentativeFactory extends Factory
     {
         return [
             //
+            'first_name'=> $this->faker->firstName,
+            'last_name' => $this->faker->lastName,
+            'registration_number' => $this->faker->unique()->phoneNumber,
+            'year_of_study'=> $this->faker->year,
+            'programme'=> $this->faker->jobTitle,
+            // 'gender'=> $this->faker->randomElements(['male','female'])
+
         ];
     }
 }
