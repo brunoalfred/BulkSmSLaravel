@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model as Model;
 
 
@@ -19,6 +20,8 @@ use Illuminate\Database\Eloquent\Model as Model;
  */
 class ClassRepresentative extends Model
 {
+    use HasFactory;
+
 
     public $table = 'class_representatives';
 
