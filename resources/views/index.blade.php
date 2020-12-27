@@ -222,3 +222,10 @@
 
 
     @endsection
+
+    @push('scripts')
+
+    <!-- Apex js -->
+    <script src="{{ asset('assets/js/vendor/apexcharts.min.js') }}"></script>
+
+    @endpush

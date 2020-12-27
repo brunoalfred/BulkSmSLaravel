@@ -1,9 +1,10 @@
 
-    <table id="basic-datatable" class="table dt-responsive nowrap w-100">
+    <table id="basic-datatable" class="table table-striped dt-responsive nowrap w-100">
         <thead>
             <tr>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>Registration Number</th>
                 <th>Year Of Study</th>
                 <th>Programme</th>
                 <th>Gender</th>
@@ -15,6 +16,7 @@
                 <tr>
                     <td>{{ $classRepresentative->first_name }}</td>
                     <td>{{ $classRepresentative->last_name }}</td>
+                    <td>{{ $classRepresentative->registration_number }}</td>
                     <td>{{ $classRepresentative->year_of_study }}</td>
                     <td>{{ $classRepresentative->programme }}</td>
                     <td>{{ $classRepresentative->gender }}</td>
