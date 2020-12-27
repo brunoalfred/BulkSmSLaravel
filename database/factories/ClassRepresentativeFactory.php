@@ -25,7 +25,7 @@ class ClassRepresentativeFactory extends Factory
             //
             'first_name'=> $this->faker->firstName,
             'last_name' => $this->faker->lastName,
-            'registration_number' => $this->faker->unique()->phoneNumber,
+            'registration_number' => $this->faker->unique()->swiftBicNumber,
             'year_of_study'=> $this->faker->year,
             'programme'=> $this->faker->jobTitle,
             // 'gender'=> $this->faker->randomElements(['male','female'])
