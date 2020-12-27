@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Model as Model;
  *
  * @property string $first_name
  * @property string $last_name
+ * @property string $registration_number
  * @property integer $year_of_study
  * @property string $programme
  * @property string $gender
@@ -36,6 +37,7 @@ class ClassRepresentative extends Model
     public $fillable = [
         'first_name',
         'last_name',
+        'registration_number',
         'year_of_study',
         'programme',
         'gender'
@@ -49,7 +51,7 @@ class ClassRepresentative extends Model
     protected $casts = [
         'first_name' => 'string',
         'last_name' => 'string',
-        'registration_number' => 'integer',
+        'registration_number' => 'string',
         'year_of_study' => 'integer',
         'programme' => 'string',
         'gender' => 'string'
@@ -62,6 +64,7 @@ class ClassRepresentative extends Model
      */
     public static $rules = [
         'first_name' => 'required|string|max:25',
+        'last_name' => 'required|string|max:25',
         'last_name' => 'required|string|max:25',
         'year_of_study' => 'required|integer',
         'programme' => 'required|string|max:30',

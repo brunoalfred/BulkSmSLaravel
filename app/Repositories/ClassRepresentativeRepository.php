@@ -20,6 +20,7 @@ class ClassRepresentativeRepository extends BaseRepository
         'first_name',
         'last_name',
         'year_of_study',
+        'registration_number',
         'programme',
         'gender'
     ];
