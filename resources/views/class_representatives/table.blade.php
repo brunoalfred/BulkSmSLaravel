@@ -1,5 +1,5 @@
-<div class="table-responsive">
-    <table class="table" id="classRepresentatives-table">
+
+    <table id="basic-datatable" class="table dt-responsive nowrap w-100">
         <thead>
             <tr>
                 <th>First Name</th>
@@ -35,4 +35,4 @@
             @endforeach
         </tbody>
     </table>
-</div>
+
