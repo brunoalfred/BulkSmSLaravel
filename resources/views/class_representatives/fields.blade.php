@@ -22,6 +22,13 @@
     {!! Form::text('programme', null, ['class' => 'form-control','maxlength' => 30,'maxlength' => 30]) !!}
 </div>
 
+
+<!-- Programme Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('registration_number', 'Registration Number:') !!}
+    {!! Form::text('registration_number', null, ['class' => 'form-control','maxlength' => 30,'maxlength' => 30]) !!}
+</div>
+
 <!-- Gender Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('gender', 'Gender:') !!}
