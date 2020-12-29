@@ -10,6 +10,12 @@
     {!! Form::text('last_name', null, ['class' => 'form-control','maxlength' => 25,'maxlength' => 25]) !!}
 </div>
 
+<!-- Registration Number Field -->
+<div class="form-group col-sm-6">
+    {!! Form::label('registration_number', 'Registration Number:') !!}
+    {!! Form::text('registration_number', null, ['class' => 'form-control','maxlength' => 25,'maxlength' => 25]) !!}
+</div>
+
 <!-- Year Of Study Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('year_of_study', 'Year Of Study:') !!}
@@ -19,14 +25,7 @@
 <!-- Programme Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('programme', 'Programme:') !!}
-    {!! Form::text('programme', null, ['class' => 'form-control','maxlength' => 30,'maxlength' => 30]) !!}
-</div>
-
-
-<!-- Programme Field -->
-<div class="form-group col-sm-6">
-    {!! Form::label('registration_number', 'Registration Number:') !!}
-    {!! Form::text('registration_number', null, ['class' => 'form-control','maxlength' => 30,'maxlength' => 30]) !!}
+    {!! Form::text('programme', null, ['class' => 'form-control','maxlength' => 100,'maxlength' => 100]) !!}
 </div>
 
 <!-- Gender Field -->

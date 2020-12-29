@@ -10,6 +10,12 @@
     <p>{{ $classRepresentative->last_name }}</p>
 </div>
 
+<!-- Registration Number Field -->
+<div class="form-group">
+    {!! Form::label('registration_number', 'Registration Number:') !!}
+    <p>{{ $classRepresentative->registration_number }}</p>
+</div>
+
 <!-- Year Of Study Field -->
 <div class="form-group">
     {!! Form::label('year_of_study', 'Year Of Study:') !!}
