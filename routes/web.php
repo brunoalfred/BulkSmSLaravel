@@ -25,3 +25,5 @@ Route::get('/sms', [App\Http\Controllers\BroadcastSms::class, 'Send' ])->name('s
 
 
 Route::resource('classRepresentatives', App\Http\Controllers\ClassRepresentativeController::class);
+
+Route::resource('classRepresentatives', App\Http\Controllers\ClassRepresentativeController::class);

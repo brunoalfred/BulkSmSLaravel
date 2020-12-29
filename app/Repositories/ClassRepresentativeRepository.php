@@ -8,7 +8,7 @@ use App\Repositories\BaseRepository;
 /**
  * Class ClassRepresentativeRepository
  * @package App\Repositories
- * @version December 21, 2020, 9:26 pm UTC
+ * @version December 27, 2020, 12:28 pm UTC
 */
 
 class ClassRepresentativeRepository extends BaseRepository
@@ -19,8 +19,8 @@ class ClassRepresentativeRepository extends BaseRepository
     protected $fieldSearchable = [
         'first_name',
         'last_name',
-        'year_of_study',
         'registration_number',
+        'year_of_study',
         'programme',
         'gender'
     ];

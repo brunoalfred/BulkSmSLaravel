@@ -2,15 +2,14 @@
 
 namespace App\Models;
 
+use Eloquent as Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model as Model;
-
-
 
 /**
  * Class ClassRepresentative
  * @package App\Models
- * @version December 21, 2020, 9:26 pm UTC
+ * @version December 27, 2020, 12:28 pm UTC
  *
  * @property string $first_name
  * @property string $last_name
@@ -21,16 +20,17 @@ use Illuminate\Database\Eloquent\Model as Model;
  */
 class ClassRepresentative extends Model
 {
+    use SoftDeletes;
+
     use HasFactory;
 
-
     public $table = 'class_representatives';
-
-
+    
     const CREATED_AT = 'created_at';
     const UPDATED_AT = 'updated_at';
 
-    protected $primaryKey = 'registration_number';
+
+    protected $dates = ['deleted_at'];
 
 
 
@@ -65,9 +65,13 @@ class ClassRepresentative extends Model
     public static $rules = [
         'first_name' => 'required|string|max:25',
         'last_name' => 'required|string|max:25',
-        'last_name' => 'required|string|max:25',
+        'registration_number' => 'required|string|max:25',
         'year_of_study' => 'required|integer',
-        'programme' => 'required|string|max:30',
-        'gender' => 'required|string'
+        'programme' => 'required|string|max:100',
+        'gender' => 'required|string',
+        'created_at' => 'nullable',
+        'updated_at' => 'nullable'
     ];
+
+    
 }

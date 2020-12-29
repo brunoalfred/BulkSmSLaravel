@@ -22,14 +22,14 @@ class ClassRepresentativeFactory extends Factory
     public function definition()
     {
         return [
-            //
-            'first_name'=> $this->faker->firstName,
-            'last_name' => $this->faker->lastName,
-            'registration_number' => $this->faker->unique()->swiftBicNumber,
-            'year_of_study'=> $this->faker->year,
-            'programme'=> $this->faker->jobTitle,
-            'gender'=> $this->faker->randomElements(['male','female'])
-
+            'first_name' => $this->faker->word,
+        'last_name' => $this->faker->word,
+        'registration_number' => $this->faker->word,
+        'year_of_study' => $this->faker->randomDigitNotNull,
+        'programme' => $this->faker->word,
+        'gender' => $this->faker->word,
+        'created_at' => $this->faker->date('Y-m-d H:i:s'),
+        'updated_at' => $this->faker->date('Y-m-d H:i:s')
         ];
     }
 }

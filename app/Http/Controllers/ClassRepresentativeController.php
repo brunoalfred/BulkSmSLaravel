@@ -2,19 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\ClassRepresentativeDataTable;
+use App\Http\Requests;
 use App\Http\Requests\CreateClassRepresentativeRequest;
 use App\Http\Requests\UpdateClassRepresentativeRequest;
 use App\Repositories\ClassRepresentativeRepository;
-use App\Http\Controllers\AppBaseController;
-use http\Client\Response;
-use Illuminate\Contracts\Foundation\Application;
-use Illuminate\Contracts\View\Factory;
-use Illuminate\Contracts\View\View;
-use Illuminate\Http\RedirectResponse;
-use Illuminate\Http\Request;
 use Flash;
-use Illuminate\Routing\Redirector;
-
+use App\Http\Controllers\AppBaseController;
+use Response;
 
 class ClassRepresentativeController extends AppBaseController
 {
@@ -29,21 +24,18 @@ class ClassRepresentativeController extends AppBaseController
     /**
      * Display a listing of the ClassRepresentative.
      *
-     * @param Request $request
-     *
-     * @return Application|Factory|View|Response
+     * @param ClassRepresentativeDataTable $classRepresentativeDataTable
+     * @return Response
      */
-    public function index(Request $request)
+    public function index(ClassRepresentativeDataTable $classRepresentativeDataTable)
     {
-        $classRepresentatives = $this->classRepresentativeRepository->all();
-
-        return view('class_representatives.index')->with('classRepresentatives', $classRepresentatives);
+        return $classRepresentativeDataTable->render('class_representatives.index');
     }
 
     /**
      * Show the form for creating a new ClassRepresentative.
      *
-     * @return Response|Application|Factory|View
+     * @return Response
      */
     public function create()
     {
@@ -55,7 +47,7 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param CreateClassRepresentativeRequest $request
      *
-     * @return Response|Application|RedirectResponse|Redirector
+     * @return Response
      */
     public function store(CreateClassRepresentativeRequest $request)
     {
@@ -71,9 +63,9 @@ class ClassRepresentativeController extends AppBaseController
     /**
      * Display the specified ClassRepresentative.
      *
-     * @param int $id
+     * @param  int $id
      *
-     * @return Response|Application|Factory|View
+     * @return Response
      */
     public function show($id)
     {
@@ -91,9 +83,9 @@ class ClassRepresentativeController extends AppBaseController
     /**
      * Show the form for editing the specified ClassRepresentative.
      *
-     * @param int $id
+     * @param  int $id
      *
-     * @return Response|Application|Factory|View
+     * @return Response
      */
     public function edit($id)
     {
@@ -111,10 +103,10 @@ class ClassRepresentativeController extends AppBaseController
     /**
      * Update the specified ClassRepresentative in storage.
      *
-     * @param int $id
+     * @param  int              $id
      * @param UpdateClassRepresentativeRequest $request
      *
-     * @return Response|Application|RedirectResponse|Redirector
+     * @return Response
      */
     public function update($id, UpdateClassRepresentativeRequest $request)
     {
@@ -136,11 +128,9 @@ class ClassRepresentativeController extends AppBaseController
     /**
      * Remove the specified ClassRepresentative from storage.
      *
-     * @param int $id
+     * @param  int $id
      *
-     * @return Response|Application|RedirectResponse|Redirector
-     * @throws \Exception
-     *
+     * @return Response
      */
     public function destroy($id)
     {
