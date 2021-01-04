@@ -9,6 +9,11 @@ use App\Http\Requests\UpdateClassRepresentativeRequest;
 use App\Repositories\ClassRepresentativeRepository;
 use Flash;
 use App\Http\Controllers\AppBaseController;
+use Illuminate\Contracts\Foundation\Application;
+use Illuminate\Contracts\View\Factory;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Routing\Redirector;
 use Response;
 
 class ClassRepresentativeController extends AppBaseController
@@ -35,7 +40,7 @@ class ClassRepresentativeController extends AppBaseController
     /**
      * Show the form for creating a new ClassRepresentative.
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
     public function create()
     {
@@ -47,7 +52,7 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param CreateClassRepresentativeRequest $request
      *
-     * @return Response
+     * @return Application|RedirectResponse|Redirector|Response
      */
     public function store(CreateClassRepresentativeRequest $request)
     {
@@ -65,7 +70,7 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param  int $id
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
     public function show($id)
     {
@@ -85,7 +90,7 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param  int $id
      *
-     * @return Response
+     * @return Application|Factory|View|Response
      */
     public function edit($id)
     {
@@ -106,7 +111,7 @@ class ClassRepresentativeController extends AppBaseController
      * @param  int              $id
      * @param UpdateClassRepresentativeRequest $request
      *
-     * @return Response
+     * @return Application|RedirectResponse|Redirector|Response
      */
     public function update($id, UpdateClassRepresentativeRequest $request)
     {
@@ -130,7 +135,7 @@ class ClassRepresentativeController extends AppBaseController
      *
      * @param  int $id
      *
-     * @return Response
+     * @return Application|RedirectResponse|Redirector|Response
      */
     public function destroy($id)
     {
