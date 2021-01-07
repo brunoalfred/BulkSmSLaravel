@@ -22,13 +22,24 @@ class BroadcastSms extends Controller
     public function Send()
     {
         $AT = new AfricasTalking('sandbox', '20c16062337b23c37b20c89d63851a525cbbfc7b38c5e4bb8a84098d9c378480');
-        $sms      = $AT->sms();
-        $result   = $sms->send([
-            'to'      => '255757221600',
-            'message' => 'Bruno Hapa!, Niaje',
+        // $sms      = $AT->sms();
+
+        // $result   = $sms->send([
+        //     'to'      => '255757221600',
+        //     'message' => 'Bruno Hapa!, Testing',
 
 
+        // ]);
+
+        
+
+        $content = $AT->content();
+        $result = $content->createSubscription([
+            'shotCode'=> '37293',
+            'keyword'=> 'Welcome',
+            'phoneNumber'=>'255757221600',
+            'checkoutToken'=>''
         ]);
-        dd($result);
+        dd($content);
     }
 }
