@@ -3,6 +3,7 @@
 namespace App\DataTables;
 
 use App\Models\ClassRepresentative;
+use Illuminate\Database\Eloquent\Builder;
 use Yajra\DataTables\Services\DataTable;
 use Yajra\DataTables\EloquentDataTable;
 
@@ -24,8 +25,8 @@ class ClassRepresentativeDataTable extends DataTable
     /**
      * Get query source of dataTable.
      *
-     * @param \App\Models\ClassRepresentative $model
-     * @return \Illuminate\Database\Eloquent\Builder
+     * @param ClassRepresentative $model
+     * @return Builder
      */
     public function query(ClassRepresentative $model)
     {
